@@ -1,0 +1,16 @@
+.ck-editor {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.ck-editor__main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.ck-content {
+  flex: 1;
+  flex-direction: column;
+}
