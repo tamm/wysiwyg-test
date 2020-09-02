@@ -61,11 +61,11 @@
   justify-content: flex-end;
 }
 
-.toolbar-right .Button-root-208 {
+.toolbar-right .toolbar-button {
   margin-left: .5rem;
 }
 
-.toolbar-right .Button-root-208.active {
+.toolbar-right .toolbar-button.active {
   background: teal;
   color: white;
 }

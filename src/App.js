@@ -73,16 +73,16 @@ function App() {
         </ToolbarContent>
     
         <ToolbarContent className="toolbar-right">
-          <Button className={tab === "All" && 'active'} onClick={() => setTab("All")}>
+          <Button className={'toolbar-button ' + (tab === "All" && 'active')} onClick={() => setTab("All")}>
             All
           </Button>
-          <Button className={tab === "CKApp" && 'active'} onClick={() => setTab("CKApp")}>
+          <Button className={'toolbar-button ' + (tab === "CKApp" && 'active')} onClick={() => setTab("CKApp")}>
             CK Editor 5
           </Button>
-          <Button className={tab === "TinyApp" && 'active'} onClick={() => setTab("TinyApp")}>
+          <Button className={'toolbar-button ' + (tab === "TinyApp" && 'active')} onClick={() => setTab("TinyApp")}>
             Tiny MCE
           </Button>
-          <Button className={tab === "Quill" && 'active'} onClick={() => setTab("Quill")}>
+          <Button className={'toolbar-button ' + (tab === "Quill" && 'active')} onClick={() => setTab("Quill")}>
             Quill
           </Button>
         </ToolbarContent>
