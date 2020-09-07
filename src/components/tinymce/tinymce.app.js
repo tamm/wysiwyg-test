@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import tinymce from 'tinymce/tinymce';
+import 'tinymce/tinymce';
 import 'tinymce/icons/default';
 import 'tinymce/themes/silver';
 import 'tinymce/plugins/paste';
@@ -26,6 +26,7 @@ import 'tinymce/plugins/help';
 import 'tinymce/plugins/wordcount';
 
 import { Editor } from '@tinymce/tinymce-react';
+import 'tinymce-giphy';
 
 class TinyApp extends Component {
   constructor (props) {
@@ -50,12 +51,12 @@ class TinyApp extends Component {
             plugins: [
               'advlist autolink lists link image charmap print preview anchor',
               'searchreplace visualblocks code fullscreen',
-              'insertdatetime media table paste code help wordcount'
+              'insertdatetime media table paste code help wordcount giphy'
             ],
             toolbar:
               `undo redo | formatselect | bold italic backcolor | \
               alignleft aligncenter alignright alignjustify | \
-              bullist numlist outdent indent | removeformat | help`
+              bullist numlist outdent indent | removeformat | help | giphy`
           }}
           onEditorChange={this.handleEditorChange}
         />

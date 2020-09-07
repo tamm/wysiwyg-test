@@ -29,39 +29,39 @@ function App() {
 
   useEffect(() => {
     console.log('editorHtmlCKApp:', editorHtmlCKApp);
-    if(sync && prevEditorHtmlCKApp != editorHtmlCKApp) {
+    if(sync && prevEditorHtmlCKApp !== editorHtmlCKApp) {
       setEditorHtmlShared(editorHtmlCKApp);
       setEditorHtmlTinyApp(editorHtmlCKApp);
       setEditorHtmlQuill(editorHtmlCKApp);
     }
-  }, [editorHtmlCKApp, sync]);
+  }, [editorHtmlCKApp, sync, prevEditorHtmlCKApp]);
 
   useEffect(() => {
     console.log('editorHtmlTinyApp:', editorHtmlTinyApp);
-    if(sync && prevEditorHtmlTinyApp != editorHtmlTinyApp) {
+    if(sync && prevEditorHtmlTinyApp !== editorHtmlTinyApp) {
       setEditorHtmlShared(editorHtmlTinyApp);
       setEditorHtmlCKApp(editorHtmlTinyApp);
       setEditorHtmlQuill(editorHtmlTinyApp);
     }
-  }, [editorHtmlTinyApp, sync]);
+  }, [editorHtmlTinyApp, sync, prevEditorHtmlTinyApp]);
 
   useEffect(() => {
     console.log('editorHtmlQuill:', editorHtmlQuill);
-    if(sync && prevEditorHtmlQuill != editorHtmlQuill) {
+    if(sync && prevEditorHtmlQuill !== editorHtmlQuill) {
       setEditorHtmlShared(editorHtmlQuill);
       setEditorHtmlCKApp(editorHtmlQuill);
       setEditorHtmlTinyApp(editorHtmlQuill);
     }
-  }, [editorHtmlQuill, sync]);
+  }, [editorHtmlQuill, sync, prevEditorHtmlQuill]);
 
   useEffect(() => {
     console.log('editorHtmlShared:', editorHtmlShared);
-    if(sync && prevEditorHtmlShared != editorHtmlShared) {
+    if(sync && prevEditorHtmlShared !== editorHtmlShared) {
       setEditorHtmlCKApp(editorHtmlShared);
       setEditorHtmlTinyApp(editorHtmlShared);
       setEditorHtmlQuill(editorHtmlShared);
     }
-  }, [editorHtmlShared, sync]);
+  }, [editorHtmlShared, sync, prevEditorHtmlShared]);
 
   return (
     <div className="App">
