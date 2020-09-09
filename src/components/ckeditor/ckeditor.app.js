@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import CKEditor from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+// import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import './ckeditor.css';
+
+import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
+import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
+import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
+import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
+import Heading from '@ckeditor/ckeditor5-heading/src/heading';
+import Image from '@ckeditor/ckeditor5-image/src/image';
+
+import Giphy from 'ckeditor5-giphy';
 
 class CKApp extends Component {
   constructor (props) {
@@ -20,6 +30,10 @@ class CKApp extends Component {
         <CKEditor
           editor={ ClassicEditor }
           data={this.props.editorHtml}
+          config={ {
+            plugins: [ Essentials, Paragraph, Bold, Italic, Heading, Giphy, Image ],
+            toolbar: [ 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo', 'giphy']
+          } }
           onInit={ editor => {
             // You can store the "editor" and use when it is needed.
             console.log( 'Editor is ready to use!', editor );

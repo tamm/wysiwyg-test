@@ -3,6 +3,9 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import PropTypes from 'prop-types';
 import './quill.css';
+import 'quill-giphy';
+import 'quill-emoji';
+import 'quill-emoji/dist/quill-emoji.css';
 
 class Editor extends Component {
   constructor (props) {
@@ -77,14 +80,24 @@ Editor.modules = {
       [{ 'align': [] }],
 
       ['link'],
+      ['emoji'],
+      ['giphy'],
 
       ['clean']                                         // remove formatting button
     ],
+    handlers: {
+      'emoji': function() {},
+      'giphy': function() {}
+    }
   },
   clipboard: {
     // toggle to add extra line breaks when pasting HTML:
     matchVisual: true,
   },
+  "giphy": true,
+  "emoji-toolbar": true,
+  "emoji-textarea": true,
+  "emoji-shortname": true,
   // divider: true,
 }
 /* 

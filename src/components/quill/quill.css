@@ -3,3 +3,7 @@
   flex: 1;
   flex-direction: column;
 }
+
+.ql-editor p {
+  margin-bottom: .5rem;
+}
